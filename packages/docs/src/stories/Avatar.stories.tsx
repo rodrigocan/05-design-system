@@ -8,6 +8,13 @@ export default {
     src: 'https://github.com/rodrigocan.png',
     alt: 'Rodrigo Cândido',
   },
+  argTypes: {
+    src: {
+      control: {
+        type: 'text',
+      },
+    },
+  },
 } as Meta<AvatarProps>
 
 export const Primary: StoryObj<AvatarProps> = {}
