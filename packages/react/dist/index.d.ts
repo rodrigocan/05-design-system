@@ -1,8 +1,8 @@
 import * as _stitches_react_types_styled_component from '@stitches/react/types/styled-component';
 import * as _stitches_react_types_css_util from '@stitches/react/types/css-util';
-import { ComponentProps } from '@stitches/react';
 import * as react from 'react';
-import { ElementType, ComponentProps as ComponentProps$1 } from 'react';
+import { ComponentProps, ElementType } from 'react';
+import { ComponentProps as ComponentProps$1 } from '@stitches/react';
 import * as Avatar$1 from '@radix-ui/react-avatar';
 import * as Checkbox$1 from '@radix-ui/react-checkbox';
 
@@ -209,6 +209,7 @@ declare const Box: _stitches_react_types_styled_component.StyledComponent<"div",
     zIndex: "zIndices";
 }, {}>>;
 interface BoxProps extends ComponentProps<typeof Box> {
+    as?: ElementType;
 }
 
 declare const Text: _stitches_react_types_styled_component.StyledComponent<"p", {
@@ -415,7 +416,7 @@ declare const Text: _stitches_react_types_styled_component.StyledComponent<"p", 
     transition: "transitions";
     zIndex: "zIndices";
 }, {}>>;
-interface TextProps extends ComponentProps<typeof Text> {
+interface TextProps extends ComponentProps$1<typeof Text> {
     as?: ElementType;
 }
 
@@ -623,7 +624,7 @@ declare const Heading: _stitches_react_types_styled_component.StyledComponent<"h
     transition: "transitions";
     zIndex: "zIndices";
 }, {}>>;
-interface HeadingProps extends ComponentProps<typeof Heading> {
+interface HeadingProps extends ComponentProps$1<typeof Heading> {
     as?: ElementType;
 }
 
@@ -830,9 +831,12 @@ declare const AvatarImage: _stitches_react_types_styled_component.StyledComponen
     zIndex: "zIndices";
 }, {}>>;
 
-interface AvatarProps extends ComponentProps$1<typeof AvatarImage> {
+interface AvatarProps extends ComponentProps<typeof AvatarImage> {
 }
 declare function Avatar(props: AvatarProps): JSX.Element;
+declare namespace Avatar {
+    var displayName: string;
+}
 
 declare const Button: _stitches_react_types_styled_component.StyledComponent<"button", {
     variant?: "primary" | "secondary" | "tertiary" | undefined;
@@ -1039,7 +1043,7 @@ declare const Button: _stitches_react_types_styled_component.StyledComponent<"bu
     transition: "transitions";
     zIndex: "zIndices";
 }, {}>>;
-interface ButtonProps extends ComponentProps$1<typeof Button> {
+interface ButtonProps extends ComponentProps<typeof Button> {
     as?: ElementType;
 }
 
@@ -1246,10 +1250,13 @@ declare const Input: _stitches_react_types_styled_component.StyledComponent<"inp
     zIndex: "zIndices";
 }, {}>>;
 
-interface TextInputProps extends ComponentProps$1<typeof Input> {
+interface TextInputProps extends ComponentProps<typeof Input> {
     prefix?: string;
 }
 declare function TextInput({ prefix, ...props }: TextInputProps): JSX.Element;
+declare namespace TextInput {
+    var displayName: string;
+}
 
 declare const TextArea: _stitches_react_types_styled_component.StyledComponent<"textarea", {}, {}, _stitches_react_types_css_util.CSS<{}, {
     colors: {
@@ -1453,7 +1460,7 @@ declare const TextArea: _stitches_react_types_styled_component.StyledComponent<"
     transition: "transitions";
     zIndex: "zIndices";
 }, {}>>;
-interface TextAreaProps extends ComponentProps$1<typeof TextArea> {
+interface TextAreaProps extends ComponentProps<typeof TextArea> {
 }
 
 declare const CheckboxContainer: _stitches_react_types_styled_component.StyledComponent<react.ForwardRefExoticComponent<Checkbox$1.CheckboxProps & react.RefAttributes<HTMLButtonElement>>, {}, {}, _stitches_react_types_css_util.CSS<{}, {
@@ -1659,14 +1666,20 @@ declare const CheckboxContainer: _stitches_react_types_styled_component.StyledCo
     zIndex: "zIndices";
 }, {}>>;
 
-interface CheckboxProps extends ComponentProps$1<typeof CheckboxContainer> {
+interface CheckboxProps extends ComponentProps<typeof CheckboxContainer> {
 }
 declare function Checkbox(props: CheckboxProps): JSX.Element;
+declare namespace Checkbox {
+    var displayName: string;
+}
 
 interface MultiStepProps {
     size: number;
     currentStep?: number;
 }
 declare function MultiStep({ size, currentStep }: MultiStepProps): JSX.Element;
+declare namespace MultiStep {
+    var displayName: string;
+}
 
 export { Avatar, AvatarProps, Box, BoxProps, Button, ButtonProps, Checkbox, CheckboxProps, Heading, HeadingProps, MultiStep, MultiStepProps, Text, TextArea, TextAreaProps, TextInput, TextInputProps, TextProps };
