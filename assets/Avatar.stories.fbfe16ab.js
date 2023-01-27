@@ -1,0 +1,2 @@
+import{A as t}from"./index.ab6578f5.js";import"./index.4151086d.js";import"./iframe.1be8c65a.js";import"./index.fcc4798c.js";import"./jsx-runtime.0065d70c.js";const c={title:"Data display/Avatar",component:t,args:{src:"https://github.com/rodrigocan.png",alt:"Rodrigo C\xE2ndido"},argTypes:{src:{control:{type:"text"}}}},p={},m={args:{src:void 0}},n=["Primary","WithFallback"];export{p as Primary,m as WithFallback,n as __namedExportsOrder,c as default};
+//# sourceMappingURL=Avatar.stories.fbfe16ab.js.map
