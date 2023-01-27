@@ -19,7 +19,8 @@ jobs:
 
       - run: npm ci
         env:
-          TURBO_TOKEN: 13wKHNLJH3TlGd2zgYNdgWKD
+          TURBO_TOKEN: UdYKDDQ94aMsTo22TQp6uslq
+          TURBO_TEAM: Homerod
 
       - run: npm run build
 
