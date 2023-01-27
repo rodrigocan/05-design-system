@@ -18,6 +18,8 @@ jobs:
           node-version: 16
 
       - run: npm ci
+        env:
+          TURBO_TOKEN: 13wKHNLJH3TlGd2zgYNdgWKD
 
       - run: npm run build
 
